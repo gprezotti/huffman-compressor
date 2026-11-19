@@ -72,14 +72,14 @@ O formato `.huff` é **próprio deste projeto** e não garante compatibilidade c
 
 Para arquivos não vazios, a redução percentual é calculada por:
 
-$
+\[
 R = \left(1 - \frac{T_c}{T_o}\right) \times 100
-$
+\]
 
 Em que:
 
-- $T_o$: tamanho original, em bytes;
-- $T_c$: tamanho final do arquivo `.huff`, incluindo cabeçalho e metadados.
+- \(T_o\): tamanho original, em bytes;
+- \(T_c\): tamanho final do arquivo `.huff`, incluindo cabeçalho e metadados.
 
 Um valor **positivo** indica economia de espaço; um valor **negativo** indica que o arquivo compactado ficou maior. Para arquivos vazios, a redução percentual não é aplicável.
 
