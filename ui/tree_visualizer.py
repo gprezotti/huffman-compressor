@@ -12,7 +12,7 @@ class TreeVisualizer:
             print("Não existe árvore para visualizar.")
             return
 
-        self.window = tk.Tk()
+        self.window = tk.Toplevel()
         self.window.title("Árvore de Huffman")
         self.window.geometry("1200x700")
 
@@ -44,8 +44,6 @@ class TreeVisualizer:
         self.canvas.pack(fill="both", expand=True)
 
         self.draw_node(self.root, 1200, 60, 600)
-
-        self.window.mainloop()
 
     def draw_node(self, node, x, y, distance):
         if node is None:
