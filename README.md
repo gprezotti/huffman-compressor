@@ -35,7 +35,6 @@ O algoritmo de Huffman foi implementado manualmente, incluindo a construção da
    python main.py
    ```
 
-
 3. Na interface, escolha **Compactar** ou **Descompactar**, selecione o arquivo de entrada e defina o destino.
 4. Clique em **Executar**. Após uma compactação de arquivo não vazio, use **Visualizar árvore** para abrir a representação gráfica.
 
@@ -51,10 +50,10 @@ huffman_project/
 ├── services/
 │   └── compression_service.py   # Fluxo de compactação e descompactação
 ├── storage/
-│   └── file_handler.py         # Leitura e gravação de arquivos
+│   └── file_handler.py          # Leitura e gravação de arquivos
 ├── ui/
 │   ├── interface.py             # Interface principal em Tkinter
-│   └── tree_visualizer.py      # Visualização gráfica da árvore
+│   └── tree_visualizer.py       # Visualização gráfica da árvore
 ├── tests/
 │   └── test_huffman.py          # Testes do algoritmo
 └── test_files/              # Arquivos usados nos experimentos
@@ -72,14 +71,14 @@ O formato `.huff` é **próprio deste projeto** e não garante compatibilidade c
 
 Para arquivos não vazios, a redução percentual é calculada por:
 
-\[
+$$
 R = \left(1 - \frac{T_c}{T_o}\right) \times 100
-\]
+$$
 
 Em que:
 
-- \(T_o\): tamanho original, em bytes;
-- \(T_c\): tamanho final do arquivo `.huff`, incluindo cabeçalho e metadados.
+- $T_o$: tamanho original, em bytes;
+- $T_c$: tamanho final do arquivo `.huff`, incluindo cabeçalho e metadados.
 
 Um valor **positivo** indica economia de espaço; um valor **negativo** indica que o arquivo compactado ficou maior. Para arquivos vazios, a redução percentual não é aplicável.
 
@@ -96,3 +95,7 @@ Os arquivos em `test_files/` permitem avaliar a compactação com diferentes tam
 ## Contexto acadêmico
 
 Projeto desenvolvido para a disciplina de **Teoria dos Grafos**, com foco na aplicação de árvores binárias, filas de prioridade e codificação de Huffman.
+
+## Licença
+
+Distribuído sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE).
