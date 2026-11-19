@@ -7,6 +7,9 @@ class CompressionService:
     MAGIC = b'HUF1'
     HEADER = struct.Struct('>4sHQB')  # assinatura, símbolos distintos, bytes originais, preenchimento
     ENTRY = struct.Struct('>BI')       # valor do byte, frequência
+    
+    def __init__(self):
+        self.tree_root = None
 
     @staticmethod
     def _pack_bits(bits):
@@ -34,6 +37,7 @@ class CompressionService:
 
         huffman = Huffman()
         bits = huffman.encode(text)
+        self.tree_root = huffman.root
         payload, padding = self._pack_bits(bits)
 
         header = self.HEADER.pack(self.MAGIC, len(frequencies), len(raw), padding)
