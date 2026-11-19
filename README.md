@@ -57,7 +57,7 @@ huffman_project/
 │   └── tree_visualizer.py      # Visualização gráfica da árvore
 ├── tests/
 │   └── test_huffman.py          # Testes do algoritmo
-└── arquivos_teste/              # Arquivos usados nos experimentos
+└── test_files/              # Arquivos usados nos experimentos
 ```
 
 ## Como funciona
@@ -91,7 +91,7 @@ Os testes podem ser executados a partir da raiz do projeto com:
 python -m unittest discover -s tests
 ```
 
-Os arquivos em `arquivos_teste/` permitem avaliar a compactação com diferentes tamanhos e distribuições de caracteres. Arquivos pequenos podem aumentar de tamanho devido ao espaço ocupado pelos metadados.
+Os arquivos em `test_files/` permitem avaliar a compactação com diferentes tamanhos e distribuições de caracteres. Arquivos pequenos podem aumentar de tamanho devido ao espaço ocupado pelos metadados.
 
 ## Contexto acadêmico
 
